@@ -44,6 +44,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mocks\AttributedTemplate.cs" />
     <Compile Include="Mocks\MockTemplate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TinaTestFixture.cs" />
