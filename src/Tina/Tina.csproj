@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReflectionExtensions.cs" />
+    <Compile Include="Template.cs" />
     <Compile Include="TemplateProviderAttribute.cs" />
     <Compile Include="Tina.cs" />
   </ItemGroup>

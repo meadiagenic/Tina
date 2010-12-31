@@ -33,6 +33,11 @@
             return templateMappings.ContainsKey(ext);
         }
 
+        public Type this[string fileOrExtension]
+        {
+            get { return GetTemplateType(fileOrExtension); }
+        }
+
         public Type GetTemplateType(string fileOrExtension)
         {
             if (string.IsNullOrEmpty(fileOrExtension)) return null;
@@ -48,7 +53,12 @@
             {
                 ext = fileOrExtension.StartsWith(".") ? fileOrExtension : "." + fileOrExtension;
             }
-            return templateMappings[ext];
+            Type implementationType = null;
+            if (templateMappings.TryGetValue(ext, out implementationType))
+            {
+                return implementationType;
+            }
+            return null;
         }
     }
 }
